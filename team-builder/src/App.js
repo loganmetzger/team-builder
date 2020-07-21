@@ -9,11 +9,11 @@ const initialFormValues = {
   role: ''
 }
 
-// const firstMember = {
-//   name: 'Bloop',
-//   email: 'bloop@bloop.com',
-//   role: 'student'
-// }
+const firstMember = {
+  name: 'Bloop',
+  email: 'bloop@bloop.com',
+  role: 'student'
+}
 
 function App() {
 
@@ -24,6 +24,8 @@ function App() {
   const updateForm = (inputName, inputValue) => {
     setFormValues({ ...formValues, [inputName]: inputValue})
   }
+
+  // setTeam([firstMember, ...team])
 
   const submitForm = () => {
     const newMember = {
