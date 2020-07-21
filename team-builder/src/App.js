@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
 import './App.css';
 import Form from './Form'
-
+import Member from './Member'
 
 const initialFormValues = {
   name: '', 
   email: '',
   role: ''
+}
+
+const firstMember = {
+  name: 'Bloop',
+  email: 'bloop@bloop.com',
+  role: 'student'
 }
 
 function App() {
@@ -16,12 +22,12 @@ function App() {
   const [formValues, setFormValues] = useState(initialFormValues);
 
   const updateForm = (inputName, inputValue) => {
-    setformValues({ ...formValues, [inputName]: inputValue})
+    setFormValues({ ...formValues, [inputName]: inputValue})
   }
 
   const submitForm = () => {
     const newMember = {
-      namer: formValues.name.trim(),
+      name: formValues.name.trim(),
       email: formValues.email.trim(),
       role: formValues.role
     }
@@ -29,12 +35,18 @@ function App() {
     if(!newMember.name || !newMember.email || !newMember.role) {
       return null;
     }
-  }
+
+    // setFormValues(initialFormValues);
   }
 
   return (
     <div className="App">
       <Form />
+      {team.map(member => {
+        return (
+          <Member />
+        )
+      })}
     </div>
   );
 }
