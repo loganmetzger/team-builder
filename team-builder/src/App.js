@@ -44,7 +44,7 @@ function App() {
       <Form />
       {team.map(member => {
         return (
-          <Member />
+          <Member details={member} />
         )
       })}
     </div>

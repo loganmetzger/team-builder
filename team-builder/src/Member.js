@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default function Member(props) {
-//   const { details } = props
+  const { details } = props
 
 //   if (!details) {
 //     return <h3>Working fetching your friend&apos;s details...</h3>
