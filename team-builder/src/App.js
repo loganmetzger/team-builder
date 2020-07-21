@@ -41,7 +41,11 @@ function App() {
 
   return (
     <div className="App">
-      <Form />
+      <Form 
+        values={formValues}
+        update={updateForm}
+        submit={submitForm}
+      />
       {team.map(member => {
         return (
           <Member details={member} />

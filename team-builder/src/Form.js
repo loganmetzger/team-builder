@@ -9,6 +9,11 @@ function Form (props) {
         update(name, value);
     }
 
+    const onSubmit = evt => {
+        evt.preventDefault()
+        submit()
+    }
+
     return (
         <div>
             <form onSubmit={onSubmit}>
@@ -24,12 +29,12 @@ function Form (props) {
                             name='name'
                             type='text'
                             placeholder='Enter Name'
-                            maxLenght='30'
+                            maxLength='30'
                             value={values.name}
                             onChange={onChange}
                         />
                     </label>
-                    <label>Email:
+                    <label>Email:&nbsp;
                         <input 
                             id='emailInput'
                             name='email'
@@ -40,7 +45,7 @@ function Form (props) {
                             onChange={onChange}
                         />
                     </label>
-                    <label>Role:
+                    <label>Role:&nbsp;
                         <select 
                             name='role'
                             value={values.role}
