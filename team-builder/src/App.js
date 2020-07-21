@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Form from './Form'
 import Member from './Member'
@@ -25,7 +25,8 @@ function App() {
     setFormValues({ ...formValues, [inputName]: inputValue})
   }
 
-  // setTeam([firstMember, ...team])
+  useEffect(() => {
+    setTeam([firstMember])},[])
 
   const submitForm = () => {
     const newMember = {
@@ -37,6 +38,8 @@ function App() {
     if(!newMember.name || !newMember.email || !newMember.role) {
       return null;
     }
+
+    setTeam([newMember, ...team]);
 
     setFormValues(initialFormValues);
   }
