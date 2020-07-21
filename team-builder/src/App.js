@@ -9,11 +9,11 @@ const initialFormValues = {
   role: ''
 }
 
-const firstMember = {
-  name: 'Bloop',
-  email: 'bloop@bloop.com',
-  role: 'student'
-}
+// const firstMember = {
+//   name: 'Bloop',
+//   email: 'bloop@bloop.com',
+//   role: 'student'
+// }
 
 function App() {
 
@@ -36,7 +36,7 @@ function App() {
       return null;
     }
 
-    // setFormValues(initialFormValues);
+    setFormValues(initialFormValues);
   }
 
   return (
